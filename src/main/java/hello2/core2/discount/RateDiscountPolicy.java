@@ -1,10 +1,15 @@
 package hello2.core2.discount;
 
+import hello2.core2.annotation.MainDiscountPolicy;
 import hello2.core2.member.Grade;
 import hello2.core2.member.Member;
-
-import javax.swing.*;
-
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+@Component
+//@Qualifier("mainDiscountPolicy") 비추
+@Primary
+//@MainDiscountPolicy
 public class RateDiscountPolicy implements DiscountPolicy{
 
     private int discountPercent = 10;
